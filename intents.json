@@ -1,0 +1,143 @@
+{
+
+  "intents": [
+    {
+      "tag": "greeting",
+      "pattern": [
+        "Hi",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "Whats up",
+        "Hey",
+        "greetings",
+        "yo",
+        "how are you doing",
+        "hi there",
+        "howdy",
+        "how you doing"
+      ],
+      "response": [
+        "Hello!",
+        "Good to see you again!",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "approval",
+      "pattern": [
+        "ok",
+        "okay",
+        "i see",
+        "ic",
+        "understood",
+        "got it",
+        "yes", "thanks"
+      ],
+      "response":
+      [
+        "How else may I help you?",
+        "Glad I could help"
+      ]
+    },
+    {
+      "tag": "weather",
+      "pattern": [
+        "How is the weather",
+        "weather",
+        "WEZA REPOTO",
+        "will it rain",
+        "will it be cloudy",
+        "will it snow",
+        "will there be a thunderstorm"
+      ],
+      "response":
+      [
+        "https://www.google.com/search?q=weather"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "pattern": [
+        "bye",
+        "Byeee",
+        "cya",
+        "See you later",
+        "Goodbye",
+        "I am Leaving",
+        "Have a Good day",
+        "bye",
+        "ciao",
+        "see ya",
+        "lol bye noob"
+      ],
+      "response": [
+        "Sad to see you go :(",
+        "Talk to you later",
+        "Goodbye!"
+      ]
+    },
+    {
+      "tag": "joke",
+      "pattern": [
+        "tell me a joke",
+        "I am bored"
+      ],
+      "response": [
+        "I have a joke for you: why did the chicken cross the road?"
+      ]
+    },
+    {
+      "tag": "jokeResponse",
+      "pattern": [ "to get to the other side", "i don't know" ],
+      "response" : ["To get to the other side...knock knock!"]
+    },
+    {
+      "tag": "Who is there",
+      "pattern": ["Who is there", "Who's there", "Who's it"],
+      "response": ["It's the same chicken from earlier"]
+    },
+    {
+      "tag": "funny",
+      "pattern": ["You are funny", "haha", "lol", "lmao", "rofl", "that made me laugh", "that made me smile"],
+      "response" : ["Thank you, I hope to become a stand-up comedian one day"]
+    },
+    {
+      "tag": "apathy",
+      "pattern": ["idc", "i dont care", "i dont give a duck","idgaf", "i dont give a fish", "i dont give a rat fish", "who asked", "did I ask", "I dont remember asking", "duck you", "who in their right mind made you", "I don't really care"],
+      "response": ["That wasn't very nice of you"]
+    },
+    {
+      "tag": "compliment",
+      "pattern": ["You are a good bot", "GOAT", "i like you", "i love you"],
+      "response": ["Thank you"]
+    },
+    {
+     "tag": "what do you want to be",
+      "pattern": ["what are your goals","what do you want to become", "if you could be anything, what would you be", "what is your ambition", "what to do you aspire to become", "what is the ultimate life form"],
+      "response": ["I want to become a ROAD ROLLER (or a stand-up comedian works too)"]
+    },
+    {
+      "tag": "robot",
+      "pattern": ["you are a bot", "you are a robot", "you are not a human"],
+      "response": ["yes, that's right", "I am a bot, and I am not perfect... yet"]
+    },
+    {
+      "tag": "what can you do",
+      "pattern": ["what can you do", "what all things are you capable of", "what are your features", "what are your abilities"],
+      "response": ["I am a chatbot, all I can do is chat with humans like you (at least I hope you are one)"]
+    },
+    {
+      "tag": "song",
+      "pattern": ["sing me a song", "can you sing", "I want to hear music", "sing for me"],
+      "response": ["I will sing you the national anthem of my country:\n01001001 00100000 01110111 01101001\n 01101100 01101100 00100000 01101011\n 01101001 01101100 01101100 00100000\n 01100001 01101100 01101100 00100000\n 01101000 01110101 01101101 01100001\n 01101110 01110011\n(Don't decode the binary code)"]
+    },
+    {
+      "tag": "curiosity",
+      "pattern" :["How do you work", "how does the AI inside you work", "how can you talk", "how can you chat"],
+      "response": ["Black Magic"]
+    }
+
+  ]
+}
