@@ -2,12 +2,11 @@
 
 <head>
     <title>Chat Room</title>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
-<body>
+<div class="console">
     <script type="text/javascript">
         $(document).ready(function () {
 
@@ -18,7 +17,12 @@
             });
 
             socket.on('message', function (msg) {
-                $("#messages").append('<li>' + msg + '</li>');
+                if (msg.substring(0, 4) == "Bot:") {
+                    $("#messages").append('<li class="message"><b>' + msg + '</b><br></li>');
+                }
+                else {
+                    $("#messages").append('<li class="message">->  <b>' + msg + '</b><br></li>');
+                }
                 console.log('Received message');
             });
 
@@ -29,9 +33,55 @@
 
         });
     </script>
-    <ul id="messages"></ul>
-    <input type="text" id="myMessage">
-    <button id="sendbutton">Send</button>
-</body>
+    <ul type="none" id="messages" class="messages"></ul>
+</div>
+<input type="text" id="myMessage" class="inputBox">
+<button id="sendbutton" class="Button">Send</button>
+
+<style>
+    .console {
+        width: 800px;
+        height: 500px;
+        border-width: 7px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-style: double;
+        padding: 5px;
+        border-color: gainsboro;
+        background-color: black;
+        overflow-y: auto;
+    }
+
+    .messages {
+        margin-left: 5px;
+    }
+
+    .message {
+        font-family: 'Consolas', 'monaco', monospace;
+        color: green;
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: 800;
+    }
+
+    .inputBox {
+        font-family: 'Consolas', 'monaco', monospace;
+        font-size: 20px;
+        border: black 2px solid;
+        background-color: green;
+        height: 30px;
+        margin-left: 10px;
+        color: gainsboro;
+    }
+
+    .Button {
+        font-family: 'Consolas', 'monaco', monospace;
+        font-size: 20px;
+        border: black 2px solid;
+        background-color: green;
+        color: gainsboro;
+        height: 30px;
+    }
+</style>
 
 </html>
